@@ -1,0 +1,19 @@
+:main
+a_name NeoForge 1.21
+a_version 1
+a_author Jarkkovich
+a_add_type c_neoforge
+a_add_version c_neoforge neoforge https://maven.neoforged.net/releases/net/neoforged/neoforge/21.0.130-beta/neoforge-21.0.130-beta-installer.jar 21
+
+:button NeoForge 1.21
+text Instalar NeoForge 1.21
+remove_server
+download_version y c_neoforge neoforge
+exec java -jar neoforge.jar --installServer
+config server_type neoforge
+exec echo "eula=true" >> eula.txt
+config server_version 1.21
+config_save
+
+say NeoForge instalado!
+sleep 2
